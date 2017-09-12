@@ -125,6 +125,33 @@ functional_autodiff/fast:
 	cd /home/shanghaitech/work_space/he_ws/audi_lib/cmake-build-debug && $(MAKE) -f src/CMakeFiles/functional_autodiff.dir/build.make src/CMakeFiles/functional_autodiff.dir/build
 .PHONY : functional_autodiff/fast
 
+Expression_tree.o: Expression_tree.cpp.o
+
+.PHONY : Expression_tree.o
+
+# target to build an object file
+Expression_tree.cpp.o:
+	cd /home/shanghaitech/work_space/he_ws/audi_lib/cmake-build-debug && $(MAKE) -f src/CMakeFiles/functional_autodiff.dir/build.make src/CMakeFiles/functional_autodiff.dir/Expression_tree.cpp.o
+.PHONY : Expression_tree.cpp.o
+
+Expression_tree.i: Expression_tree.cpp.i
+
+.PHONY : Expression_tree.i
+
+# target to preprocess a source file
+Expression_tree.cpp.i:
+	cd /home/shanghaitech/work_space/he_ws/audi_lib/cmake-build-debug && $(MAKE) -f src/CMakeFiles/functional_autodiff.dir/build.make src/CMakeFiles/functional_autodiff.dir/Expression_tree.cpp.i
+.PHONY : Expression_tree.cpp.i
+
+Expression_tree.s: Expression_tree.cpp.s
+
+.PHONY : Expression_tree.s
+
+# target to generate assembly for a file
+Expression_tree.cpp.s:
+	cd /home/shanghaitech/work_space/he_ws/audi_lib/cmake-build-debug && $(MAKE) -f src/CMakeFiles/functional_autodiff.dir/build.make src/CMakeFiles/functional_autodiff.dir/Expression_tree.cpp.s
+.PHONY : Expression_tree.cpp.s
+
 functionaudi.o: functionaudi.cpp.o
 
 .PHONY : functionaudi.o
@@ -161,6 +188,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... functional_autodiff"
+	@echo "... Expression_tree.o"
+	@echo "... Expression_tree.i"
+	@echo "... Expression_tree.s"
 	@echo "... functionaudi.o"
 	@echo "... functionaudi.i"
 	@echo "... functionaudi.s"

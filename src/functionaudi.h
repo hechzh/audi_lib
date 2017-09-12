@@ -2,7 +2,6 @@
 #define FUNCTION_DIFFERENTIAL_LIB_FUNCTIONAUDI_H
 #include <functional>
 #include <cmath>
-#include <vector>
 #define defineid(A) Function A;A.value=[](R x){return x;};A.der=[](R x){return 1;}
 typedef double R;
 typedef std::function<R(R)> func_;

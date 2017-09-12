@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/functional_autodiff.dir/functionaudi.cpp.o"
+  "CMakeFiles/functional_autodiff.dir/Expression_tree.cpp.o"
   "../../lib/libfunctional_autodiff.pdb"
   "../../lib/libfunctional_autodiff.so"
 )

@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/shanghaitech/work_space/he_ws/audi_lib/src/Expression_tree.cpp
+Expression_tree.h
+/home/shanghaitech/work_space/he_ws/audi_lib/src/Expression_tree.h
+
+/home/shanghaitech/work_space/he_ws/audi_lib/src/Expression_tree.h
+vector
+-
+map
+-
+functionaudi.h
+/home/shanghaitech/work_space/he_ws/audi_lib/src/functionaudi.h
+
 /home/shanghaitech/work_space/he_ws/audi_lib/src/functionaudi.cpp
 functionaudi.h
 /home/shanghaitech/work_space/he_ws/audi_lib/src/functionaudi.h
@@ -14,7 +26,5 @@ functionaudi.h
 functional
 -
 cmath
--
-vector
 -
 

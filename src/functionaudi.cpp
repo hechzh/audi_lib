@@ -1,6 +1,4 @@
-#ifndef FUNCTION_DIFFERENTIAL_LIB_FUNCTIONAUDI_H
 #include "functionaudi.h"
-#endif
 using namespace functionaudi;
 Function Function::operator+(Function &other){
     Function answer;
@@ -60,8 +58,7 @@ Function Function::operator/(R other){
 Function Function::operator^(R other){
     Function answer;
     answer.value=[this,other](R x){return std::pow(this->value (x) ,other);};
-    if(other==1) answer.der=this->der;
-    else answer.der= [this,other](R x){return other*std::pow(this->value (x) , other-1) * this->der(x);};
+    answer.der= [this,other](R x){return other*std::pow(this->value (x) , other-1) * this->der(x);};
     return answer;
 }
 Function Function::scalar(R scale,R move){
