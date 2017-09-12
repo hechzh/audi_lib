@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shanghaitech/work_space/he_ws/audi_lib/src/functionaudi.h
+functional
+-
+cmath
+-
+vector
+-
+
+/home/shanghaitech/work_space/he_ws/audi_lib/test/main.cpp
+iostream
+-
+../src/functionaudi.h
+/home/shanghaitech/work_space/he_ws/audi_lib/src/functionaudi.h
+
