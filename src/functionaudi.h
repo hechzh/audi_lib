@@ -3,6 +3,7 @@
 #include <functional>
 #include <cmath>
 #include <vector>
+#define defineid(A) Function A;A.value=[](R x){return x;};A.der=[](R x){return 1;}
 typedef double R;
 typedef std::function<R(R)> func_;
 namespace functionaudi{
@@ -15,22 +16,13 @@ namespace functionaudi{
         Function operator-(Function &other);
         Function operator*(Function &other);
         Function operator/(Function &other);
+        Function operator^(Function &other);
         Function operator+(R other);
         Function operator-(R other);
         Function operator*(R other);
         Function operator/(R other);
         Function operator^(R other);
         Function scalar(R scale,R move);
-        /*
-        void operator+=(Function &other);
-        void operator-=(Function &other);
-        void operator*=(Function &other);
-        void operator/=(Function &other);
-        void operator+=(R other);
-        void operator-=(R other);
-        void operator*=(R other);
-        void operator/=(R other);
-        */
     };
     Function exp(Function x);
     Function sin(Function x);
@@ -40,10 +32,17 @@ namespace functionaudi{
     Function cot(Function x);
     Function asin(Function x);
     Function acos(Function x);
-    Function asin(Function x);
     Function atan(Function x);
     Function acot(Function x);
 
+    Function sinh(Function x);
+    Function cosh(Function x);
+    Function tanh(Function x);
+    Function coth(Function x);
+    Function asinh(Function x);
+    Function acosh(Function x);
+    Function atanh(Function x);
+    Function acoth(Function x);
 
 }
 
