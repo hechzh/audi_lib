@@ -2,7 +2,7 @@
 #define FUNCTION_DIFFERENTIAL_LIB_FUNCTIONAUDI_H
 #include <functional>
 #include <cmath>
-#define defineid(A) Function A;A.value=[](R x){return x;};A.der=[](R x){return 1;}
+#define defineid(A) functionaudi::Function A;A.value=[](R x){return x;};A.der=[](R x){return 1;}
 typedef double R;
 typedef std::function<R(R)> func_;
 namespace functionaudi{
@@ -11,11 +11,11 @@ namespace functionaudi{
         func_ value;
         func_ der;
         Function(){};
-        Function operator+(Function &other);
-        Function operator-(Function &other);
-        Function operator*(Function &other);
-        Function operator/(Function &other);
-        Function operator^(Function &other);
+        Function operator+(Function other);
+        Function operator-(Function other);
+        Function operator*(Function other);
+        Function operator/(Function other);
+        Function operator^(Function other);
         Function operator+(R other);
         Function operator-(R other);
         Function operator*(R other);

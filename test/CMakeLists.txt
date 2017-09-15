@@ -1,7 +1,6 @@
 SET(SRC_LIST main.cpp)
-ADD_EXECUTABLE(demo ${SRC_LIST})
-#TARGET_LINK_LIBRARIES(demo Module_based_autodiff)
-#TARGET_LINK_LIBRARIES(demo class_based_autodiff)
-TARGET_LINK_LIBRARIES(demo functional_autodiff)
+ADD_EXECUTABLE(GTest2audi ${SRC_LIST})
+TARGET_LINK_LIBRARIES(GTest2audi functional_autodiff)
+TARGET_LINK_LIBRARIES(GTest2audi ${GTEST_LIBRARIES} pthread)
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/../bin/)
 

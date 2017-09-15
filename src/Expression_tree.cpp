@@ -21,9 +21,19 @@ lchild(node1),rchild(node2){
 std::map<int,function_expression_tree> function_expression_tree::findchilds(){
 
 }
-void Function_Expression_tree::update() {
-
+R function_expression_tree::computevalue() {
+if(lchild!= nullptr || rchild!= nullptr){
+    if (lchild== nullptr) return  rchild->computevalue();
+    else if (rchild== nullptr) return  lchild->computevalue();
+    else {
+        if (opt==addop) return lchild->computevalue()+rchild->computevalue();
+        if (opt==minusop) return lchild->computevalue()-rchild->computevalue();
+        if (opt==multipleop) return lchild->computevalue()*rchild->computevalue();
+        if (opt==divisionop) return lchild->computevalue()/rchild->computevalue();
+    }
+}else return this->value;
 }
+
 std::map<int,function_expression_tree> Function_Expression_tree::diff(){
 
 }

@@ -1,30 +1,30 @@
 #include "functionaudi.h"
 using namespace functionaudi;
-Function Function::operator+(Function &other){
+Function Function::operator+(Function other){
     Function answer;
     answer.value=[this,other](R x){return this->value (x)+other.value(x);};
-    answer.der=[this,other](R x){return this->value (x)+other.value(x);};
+    answer.der=[this,other](R x){return this->der (x)+other.der(x);};
     return answer;
 }
-Function Function::operator-(Function &other){
+Function Function::operator-(Function other){
     Function answer;
     answer.value=[this,other](R x){return this->value (x)-other.value(x);};
-    answer.der=[this,other](R x){return this->value (x)-other.value(x);};
+    answer.der=[this,other](R x){return this->der (x)-other.der(x);};
     return answer;
 }
-Function Function::operator*(Function &other){
+Function Function::operator*(Function other){
     Function answer;
     answer.value=[this,other](R x){return this->value (x)*other.value(x);};
     answer.der=[this,other](R x){return this->value (x) * other.der(x) + other.value(x) * this->der(x);};
     return answer;
 }
-Function Function::operator/(Function &other){
+Function Function::operator/(Function other){
     Function answer;
     answer.value=[this,other](R x){return this->value (x)/other.value(x);};
     answer.der=[this,other](R x){return (this->value (x) * other.der(x) + other.value(x) * this->der(x))/other.value(x)/other.value(x);};
     return answer;
 }
-Function Function::operator^(Function &other){
+Function Function::operator^(Function other){
     Function answer;
     answer.value=[this,other](R x){return std::pow(this->value (x), other.value(x));};
     answer.der= [this,other](R x){return std::pow(this->value (x) , other.value(x))*(other.der(x)*log(this->value(x))+other.value(x)*this->der(x)/this->value(x));};

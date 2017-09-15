@@ -1,8 +1,4 @@
 SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/../lib)
-#SET(LIBSTATIC_SRC Module_based_autodiff.cpp)
-#ADD_LIBRARY(Module_based_autodiff SHARED ${LIBSTATIC_SRC})
-#SET(LIBSTATIC_SRC class_based_autodiff.cpp)
-#ADD_LIBRARY(class_based_autodiff SHARED ${LIBSTATIC_SRC})
 SET(LIBSTATIC_SRC functionaudi.cpp functionaudi.cpp functionaudi.h Expression_tree.cpp Expression_tree.h)
 ADD_LIBRARY(functional_autodiff SHARED ${LIBSTATIC_SRC})
 SET_TARGET_PROPERTIES(functional_autodiff PROPERTIES LIBRARY_OUTPATH_DIRETORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
